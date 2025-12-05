@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home & Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+
+  <section id="homePage" class="flex flex-col items-center justify-center h-screen text-center">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to  Website</h1>
+    <p class="text-lg text-gray-600 mb-6">
+    </p>
+    <body class="bg-cover bg-center" style="background-image: url('https://wallpapers.com/images/hd/light-color-background-1eq9mtpjqjz9ddep.jpg');">
+
+   
+    <button onclick="showLogin()"
+      class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+      Go to Login
+    </button>
+  </section>
+
+
+  <!-- LOGIN PAGE -->
+  <section id="loginPage" class="hidden flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Login</h2>
+
+      <form>
+        <label class="block mb-2 text-gray-700 font-medium">Email</label>
+        <input type="email"
+          class="w-full border rounded px-3 py-2 mb-4 focus:outline-none focus:ring focus:ring-blue-300"
+          placeholder="Enter Email">
+
+        <label class="block mb-2 text-gray-700 font-medium">Password</label>
+        <input type="password"
+          class="w-full border rounded px-3 py-2 mb-4 focus:outline-none focus:ring focus:ring-blue-300"
+          placeholder="Enter Password">
+
+        <button type="submit"
+          class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Login
+        </button>
+      </form>
+
+      <p class="text-center text-gray-600 mt-4">
+        <button onclick="showHome()" class="text-blue-600 hover:underline">Back to Home</button>
+      </p>
+    </div>
+  </section>
+
+
+  <script>
+    function showLogin() {
+      document.getElementById("homePage").classList.add("hidden");
+      document.getElementById("loginPage").classList.remove("hidden");
+    }
+    function showHome() {
+      document.getElementById("loginPage").classList.add("hidden");
+      document.getElementById("homePage").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
